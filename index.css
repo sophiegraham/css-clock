@@ -21,7 +21,32 @@
   z-index: 10;
 }
 
-.minutes-container, .hours-container, .seconds-container {
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container{
+  animation: rotate 43200s infinite linear;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.seconds-container {
+  animation: rotate 60s infinite steps(60);
   position: absolute;
   top: 0;
   right: 0;
@@ -50,12 +75,13 @@
 }
 
 .seconds {
-background: #000;
-height: 45%;
-left: 49.5%;
-position: absolute;
-top: 14%;
-transform-origin: 50% 80%;
-width: 1%;
-z-index: 8;
+  background: #000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
 }
+
