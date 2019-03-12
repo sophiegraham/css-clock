@@ -37,7 +37,7 @@
 }
 
 .minutes-container {
-  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+  animation: rotate 3600s infinite steps(60);
   position: absolute;
   top: 0;
   right: 0;
@@ -46,7 +46,7 @@
 }
 
 .seconds-container {
-  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+  animation: rotate 60s infinite steps(60);
   position: absolute;
   top: 0;
   right: 0;
